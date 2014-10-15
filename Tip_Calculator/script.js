@@ -11,8 +11,8 @@ var mealAmount = parseFloat(prompt("Enter the cost of your meal :"));
 var taxRate = parseFloat(prompt("Please enter the tax rate :"));
 var tipRate = parseFloat(prompt("Please enter the % value of the desired tip rate :"));
 
-var subtotal = mealAmount * ((taxRate / 100) + 1);
 var taxAmount = mealAmount * (taxRate / 100);
+var subtotal = mealAmount + taxAmount;
 var tip = subtotal * (tipRate / 100);
 var grandTotal = subtotal + taxAmount + tip;
 
