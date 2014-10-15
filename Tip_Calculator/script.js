@@ -1,15 +1,18 @@
 //Validate user input
 var validate = function (input) {
-    if (input === null || input === false || input === "") {
+    if (!input) {
         document.write("You need to enter a valid number!");
         throw("ERROR: Invalid user input");
+    }
+    else {
+        return input;
     }
 };
 
 //Collect our user inputs
-var mealAmount = parseFloat(prompt("Enter the cost of your meal :"));
-var taxRate = parseFloat(prompt("Please enter the tax rate :"));
-var tipRate = parseFloat(prompt("Please enter the % value of the desired tip rate :"));
+var mealAmount = validate(parseFloat(prompt("Enter the cost of your meal :")));
+var taxRate = validate(parseFloat(prompt("Please enter the tax rate :")));
+var tipRate = validate(parseFloat(prompt("Please enter the % value of the desired tip rate :")));
 
 var taxAmount = mealAmount * (taxRate / 100);
 var subtotal = mealAmount + taxAmount;
