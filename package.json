@@ -1,0 +1,19 @@
+{
+  "name": "Thinkful-node.js",
+  "version": "1.0.0",
+  "description": "Classwork repository for Thinkful's node.js class",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/esaari/Thinkful-node.js.git"
+  },
+  "author": "Eric Saari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/esaari/Thinkful-node.js/issues"
+  },
+  "homepage": "https://github.com/esaari/Thinkful-node.js"
+}
