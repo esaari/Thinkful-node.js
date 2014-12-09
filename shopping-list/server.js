@@ -2,6 +2,8 @@ var http = require('http');
 var url = require('url');
 var items = [];
 
+var mongoose = require('mongoose');
+
 var server = http.createServer(function (req, res) {
     switch (req.method) {
         case 'POST':
@@ -66,4 +68,14 @@ var server = http.createServer(function (req, res) {
 
 server.listen(9000, function(){
     console.log('listening on 9000');
+});
+
+mongoose.connect('mongodb://127.0.0.1');
+
+var db = mongoose.connection;
+db.on('error', function callback () {
+    console.error('connection error');
+});
+db.once('open', function callback () {
+    console.error('connection success');
 });
